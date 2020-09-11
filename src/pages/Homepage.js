@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Corousel from '../components/Corousel/Corousel';
 import MovieCard from '../components/MovieCard/MovieCard';
+import MovieCardPotrait from '../components/MovieCardPotrait/MovieCardPotrait';
 
 class Homepage extends Component {
   render() {
@@ -8,9 +9,7 @@ class Homepage extends Component {
       <section className='home-section'>
           <Corousel/>
           <MovieCard title="Baru di Vidio"/>
-          <MovieCard title="Cuplikan Film"/>
-          <MovieCard title="Sport"/>
-          <MovieCard title="Movie"/>
+          <MovieCardPotrait title="Cuplikan Film"/>
       </section>
     );
   }
