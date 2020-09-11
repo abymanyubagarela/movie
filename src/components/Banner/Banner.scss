@@ -1,0 +1,146 @@
+.site-content {
+  margin-top: 56px;
+  overflow: hidden;
+}
+
+.profile-info {
+  .background {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+
+    picture {
+      max-width: 100%;
+      .picture-tag {
+        display: block;
+        margin: auto;
+      }
+
+      img {
+        width: 100%;
+        // position: absolute;
+        top: 50%;
+        z-index: 0;
+        transform: translateY(-50%);
+        filter: blur(36px);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .body {
+    position: relative;
+    max-width: 1020px;
+    margin: auto;
+    z-index: 2;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+
+    .image {
+      position: relative;
+      width: 212px;
+      height: 315px;
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 16px;
+      top: -30px;
+      box-shadow: 0 3px 6px 0 rgba(51, 51, 51, 0.2);
+
+      .photo {
+        width: 100%;
+      }
+    }
+
+    .details {
+      color: #1e1e1e;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 40px;
+      margin-top: 40px;
+      width: 758px;
+
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.25;
+        text-align: left;
+      }
+
+      .rating {
+        display: flex;
+        align-items: center;
+        line-height: 1em;
+        text-decoration: none;
+      }
+
+      .button {
+        display: flex;
+        margin: 40px 0 24px;
+        .button-action {
+          display: inline-flex;
+          align-items: center;
+          border: 0;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1;
+          padding: 11px 16px;
+          outline: none;
+          text-align: center;
+          border-radius: 32px;
+        }
+
+        .watch {
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.24);
+          background-color: #fc0f3a;
+          color: #fff;
+          margin-right: 40px;
+        }
+
+        .share {
+          border: 1.6px solid #e3e3e3;
+          background-color: #fff;
+          color: #1e1e1e;
+          margin-right: 16px;
+        }
+
+        .list {
+          border: 1.6px solid #e3e3e3;
+          color: #1e1e1e;
+          background-color: #fff;
+        }
+      }
+
+      .description {
+        p {
+          font-size: 14px;
+          line-height: 1.71;
+          color: #1e1e1e;
+          text-align: left;
+          font-weight: 400;
+          margin: 0 0 0.75em;
+        }
+      }
+
+      .profile-playlist {
+        text-align: left;
+        hr {
+          border: none;
+          border-bottom: 1px solid #eee;
+        }
+        .profile-section {
+          margin-top: 29px;
+          .header {
+            font-size: 16px;
+            font-weight: 900;
+            color: #1e1e1e;
+            line-height: 1;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
