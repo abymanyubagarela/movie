@@ -8,8 +8,8 @@ class Homepage extends Component {
     return (
       <section className='home'>
           <Corousel/>
-          <MovieCard title="Baru di Vidio"/>
-          <MovieCardPotraitrait title="Cuplikan Film"/>
+          {/* <MovieCard title="Baru di Vidio"/>
+          <MovieCardPotraitrait title="Cuplikan Film"/> */}
       </section>
     );
   }
