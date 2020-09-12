@@ -11,20 +11,31 @@
     transition: background-color 0.2s ease;
     border: none;
     outline: none;
+    margin-top: -4px;
+    height: 30px;
+    width: 334px;
+    margin-left: 68px;
     input {
       height: 32px;
       padding: 0 70px 0 24px;
       font-size: inherit;
       background: transparent;
       margin: 0;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: hidden;
+        // background-color: #eee;
+      // outline: none;
     }
-
+    .no-outline:focus {
+      outline: none;
+    }
     .submit {
       position: absolute;
       top: 0;
       right: 0;
       width: auto;
-
       .button-submit {
         background: transparent;
         border: none;
@@ -33,11 +44,31 @@
         height: 32px;
         -webkit-transition: none;
         transition: none;
-    
-          .icon-search {
-            background-image: url('../../assets/search.svg');
-          }
+          img.icon {
+            width: 22px;
+            position: relative;
+            margin-top: -4px;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: hidden;
+            // outline: 0;
+            // -moz-outline-style: none;
+            outline-style: red;
+        }
+          // i.icon-search {
+          //   background-image: url('../../assets/search.svg');
+          // }
       }
     }
   }
 }
+
+// button {
+//   border: none!important;
+//   outline: none!important;
+// }
+// button:focus {
+//   border: none;
+//   outline: none;
+// }

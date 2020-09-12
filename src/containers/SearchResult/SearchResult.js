@@ -29,6 +29,7 @@ class SearchResult extends Component {
                   <CardItemPotrait />
                   <CardItemPotrait />
                   <CardItemPotrait />
+                  <CardItemPotrait />
                   
                 </div>
               </div>

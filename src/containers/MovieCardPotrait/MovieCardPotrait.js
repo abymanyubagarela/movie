@@ -10,7 +10,9 @@ class MovieCardPotrait extends Component {
           <h2 className='title'> {this.props.title} </h2>
         </div>
         <div className='content'>
-          <CardItemPotrait/>
+          <div className='content-item'>
+            <CardItemPotrait/>
+          </div>
         </div>
       </section>
     );

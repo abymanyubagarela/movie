@@ -81,9 +81,11 @@ class Banner extends Component {
                     <hr />
                     <section className='profile-section'>
                       <h2 class='header'>Trailer</h2>
+                      <div className='profile-section-items'>
                       <MovieCardPotrait />
                       <MovieCardPotrait />
-                      <MovieCardPotrait />
+                      <MovieCardPotrait />                        
+                      </div>
                     </section>
                   </div>
                 </div>

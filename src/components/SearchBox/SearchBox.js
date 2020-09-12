@@ -6,10 +6,10 @@ class SearchBox extends Component {
     return (
       <form className='search-form'>
         <div className='main-search'>
-          <input className='input form-control' />
+          <input className="no-outline" />
           <span className='submit'>
             <button className='btn button-submit'>
-              <i className="icon-search"></i>
+              <img class="icon" src="https://static-web-prod-vidio.akamaized.net/assets/packs/media/icons/search-dark-ba342d45.svg" alt="" />
             </button>
           </span>
         </div>

@@ -3,7 +3,7 @@ import { Navbar, Nav, Form, FormControl } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import SearchBox from '../SearchBox/SearchBox';
 import './Header.scss';
-// import logo from '../../assets/logo-min.png';
+import logo from '../../assets/logo-min.png';
 
 class Header extends Component {
   render() {
@@ -12,7 +12,7 @@ class Header extends Component {
         <Navbar.Brand href='#home'>
           <img
             className='image_header'
-            src='https://static-web-prod-vidio.akamaized.net/assets/logo/logo-e25db04edf4b340056e97564bcf205d48dd02c9507d7cab5c42d4f0295cfad76.svg'
+            src={logo}
             alt='logo'
           />
         </Navbar.Brand>
