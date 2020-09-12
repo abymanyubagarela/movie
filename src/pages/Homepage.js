@@ -6,7 +6,7 @@ import MovieCardPotrait from '../components/MovieCardPotrait/MovieCardPotrait';
 class Homepage extends Component {
   render() {
     return (
-      <section className='home-section'>
+      <section className='home'>
           <Corousel/>
           <MovieCard title="Baru di Vidio"/>
           <MovieCardPotrait title="Cuplikan Film"/>

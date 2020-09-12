@@ -30,6 +30,114 @@ class MovieCard extends Component {
                     </div>
                   </div>
                 </li>
+                <li className='item'>
+                  <div className='home-content'>
+                    <a href='/'>
+                      <div className='home-content-image'>
+                        <picture className='picture-tag'>
+                          <img
+                            src='https://image.tmdb.org/t/p/original/liYc4Z2lszmsLI0qWiOmk5zJCde.jpg'
+                            alt=''
+                          />
+                        </picture>
+                      </div>
+                    </a>
+                    <div className='titles'>Holy Moon</div>
+                    <div className='detail'>
+                      <div className='subtitle'>Parade Film Pendek</div>
+                    </div>
+                  </div>
+                </li>
+                <li className='item'>
+                  <div className='home-content'>
+                    <a href='/'>
+                      <div className='home-content-image'>
+                        <picture className='picture-tag'>
+                          <img
+                            src='https://image.tmdb.org/t/p/original/liYc4Z2lszmsLI0qWiOmk5zJCde.jpg'
+                            alt=''
+                          />
+                        </picture>
+                      </div>
+                    </a>
+                    <div className='titles'>Holy Moon</div>
+                    <div className='detail'>
+                      <div className='subtitle'>Parade Film Pendek</div>
+                    </div>
+                  </div>
+                </li>
+                <li className='item'>
+                  <div className='home-content'>
+                    <a href='/'>
+                      <div className='home-content-image'>
+                        <picture className='picture-tag'>
+                          <img
+                            src='https://image.tmdb.org/t/p/original/liYc4Z2lszmsLI0qWiOmk5zJCde.jpg'
+                            alt=''
+                          />
+                        </picture>
+                      </div>
+                    </a>
+                    <div className='titles'>Holy Moon</div>
+                    <div className='detail'>
+                      <div className='subtitle'>Parade Film Pendek</div>
+                    </div>
+                  </div>
+                </li>
+                <li className='item'>
+                  <div className='home-content'>
+                    <a href='/'>
+                      <div className='home-content-image'>
+                        <picture className='picture-tag'>
+                          <img
+                            src='https://image.tmdb.org/t/p/original/liYc4Z2lszmsLI0qWiOmk5zJCde.jpg'
+                            alt=''
+                          />
+                        </picture>
+                      </div>
+                    </a>
+                    <div className='titles'>Holy Moon</div>
+                    <div className='detail'>
+                      <div className='subtitle'>Parade Film Pendek</div>
+                    </div>
+                  </div>
+                </li>
+                <li className='item'>
+                  <div className='home-content'>
+                    <a href='/'>
+                      <div className='home-content-image'>
+                        <picture className='picture-tag'>
+                          <img
+                            src='https://image.tmdb.org/t/p/original/liYc4Z2lszmsLI0qWiOmk5zJCde.jpg'
+                            alt=''
+                          />
+                        </picture>
+                      </div>
+                    </a>
+                    <div className='titles'>Holy Moon</div>
+                    <div className='detail'>
+                      <div className='subtitle'>Parade Film Pendek</div>
+                    </div>
+                  </div>
+                </li>
+                <li className='item'>
+                  <div className='home-content'>
+                    <a href='/'>
+                      <div className='home-content-image'>
+                        <picture className='picture-tag'>
+                          <img
+                            src='https://image.tmdb.org/t/p/original/liYc4Z2lszmsLI0qWiOmk5zJCde.jpg'
+                            alt=''
+                          />
+                        </picture>
+                      </div>
+                    </a>
+                    <div className='titles'>Holy Moon</div>
+                    <div className='detail'>
+                      <div className='subtitle'>Parade Film Pendek</div>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>

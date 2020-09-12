@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Carousel } from 'react-bootstrap';
+import Slider from '../Slider/Slider';
 import './Corousel.scss';
 
 export default class Corousel extends Component {
@@ -11,6 +12,18 @@ export default class Corousel extends Component {
       pause: false,
     };
     return (
+      <Carousel {...settings}>
+        <Carousel.Item>
+          <Slider />
+        </Carousel.Item>
+        <Carousel.Item>
+          <Slider />
+        </Carousel.Item>
+        <Carousel.Item>
+          <Slider />
+        </Carousel.Item>
+      </Carousel>
+      /*
       <div className='corousel-container'>
         <Carousel {...settings}>
           <Carousel.Item>
@@ -52,6 +65,7 @@ export default class Corousel extends Component {
           </Carousel.Item>
         </Carousel>
       </div>
+      */
     );
   }
 }

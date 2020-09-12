@@ -22,9 +22,9 @@ class MovieCardPotrait extends Component {
                     </picture>
                   </div>
                 </a>
-                <div class='titles'>Holy Moon</div>
-                <div class='detail'>
-                  <div class='subtitle'>Parade Film Pendek</div>
+                <div className='titles'>Holy Moon</div>
+                <div className='detail'>
+                  <div className='subtitle'>Parade Film Pendek</div>
                 </div>
               </div>
             </li>
