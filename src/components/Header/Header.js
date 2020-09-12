@@ -25,10 +25,10 @@ class Header extends Component {
             <Link to='/detail/abc'>
               <Nav>Movie</Nav>
             </Link>
-            <Link>
+            <Link to='/search'>
               <Nav>TV Show</Nav>
             </Link>
-            <Link>
+            <Link to='/detail/abc'>
               <Nav>Sport</Nav>
             </Link>
             <Nav>

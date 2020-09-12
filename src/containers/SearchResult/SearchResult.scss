@@ -1,0 +1,55 @@
+.site-content {
+  margin-top: 56px;
+  overflow: hidden;
+
+  main {
+    margin: 0 auto;
+    display: flex;
+    min-width: 1200px !important;
+    max-width: 1200px !important;
+    padding: 32px 0 24px !important;
+
+    .search-container {
+      .title {
+        font-weight: 600;
+        margin-bottom: 22px;
+        font-size: 16px;
+        color: #999;
+        .suggestion {
+          font-size: 18px;
+          margin-bottom: 16px;
+          font-weight: 600;
+          color: #1e1e1e;
+          float: left;
+        }
+      }
+      .result {
+        clear: both;
+        margin-bottom: 20px;
+        .result-info {
+          max-width: none;
+          margin-bottom: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          .label {
+            font-size: 24px;
+            color: #1e1e1e;
+            text-transform: capitalize;
+            font-weight: 700;
+            width: 66%;
+            text-align: left;
+          }
+        }
+
+        .result-content {
+          max-width: 880px;
+          text-align: left;
+        //   white-space: nowrap;
+          .result-container {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
