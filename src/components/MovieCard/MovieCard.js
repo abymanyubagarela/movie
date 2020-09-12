@@ -137,7 +137,7 @@ class MovieCard extends Component {
                       <div className='subtitle'>Parade Film Pendek</div>
                     </div>
                   </div>
-                </li>
+                </li> 
               </ul>
             </div>
           </section>
