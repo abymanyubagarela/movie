@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Corousel from '../components/Corousel/Corousel';
-import MovieCard from '../components/MovieCard/MovieCard';
-import MovieCardPotrait from '../components/MovieCardPotrait/MovieCardPotrait';
+import MovieCard from '../containers/MovieCard/MovieCard';
+import MovieCardPotraitrait from '../containers/MovieCardPotrait/MovieCardPotrait';
 
 class Homepage extends Component {
   render() {
@@ -9,7 +9,7 @@ class Homepage extends Component {
       <section className='home'>
           <Corousel/>
           <MovieCard title="Baru di Vidio"/>
-          <MovieCardPotrait title="Cuplikan Film"/>
+          <MovieCardPotraitrait title="Cuplikan Film"/>
       </section>
     );
   }

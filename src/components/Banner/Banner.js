@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import MovieCardPotrait from '../MovieCardPotrait/MovieCardPotrait';
+import MovieCardPotrait from '../../containers/MovieCardPotrait/MovieCardPotrait';
+
 import './Banner.scss';
 class Banner extends Component {
   render() {

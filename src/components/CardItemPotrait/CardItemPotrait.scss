@@ -1,0 +1,26 @@
+.item {
+  width: 173px;
+  padding: 8px;
+  display: inline-block;
+  vertical-align: top;
+
+  .potrait {
+    .image {
+      padding-bottom: 148.87%;
+      position: relative;
+      background-color: #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 0;
+      box-shadow: 0 3px 6px 0 rgba(51, 51, 51, 0.2);
+
+      .picture-tag {
+        max-width: 100%;
+
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

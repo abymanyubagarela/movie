@@ -1,0 +1,31 @@
+.site-content {
+  margin-top: 56px;
+  overflow: hidden;
+}
+.home-section {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto 40px;
+}
+.head {
+  display: flex;
+
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.content {
+  position: relative;
+}
+
+.home-grid {
+  margin-left: -8px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
