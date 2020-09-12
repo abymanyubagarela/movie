@@ -8,6 +8,7 @@ import Slider from './components/Slider/Slider';
 import CardItem from './components/CardItem/CardItem';
 import CardItemPotrait from './components/CardItemPotrait/CardItemPotrait';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import SearchResultPage from './pages/SearchResultPage';
 function App() {
   return (
     <Router>
@@ -15,16 +16,17 @@ function App() {
         <Header />
         <Switch>
           <Route path='/' exact component={Homepage} />
-          <Route path='/home' component={Homepage} />
-          <Route path='/detail' component={DetailPage} />
+          <Route path='/home' exact component={Homepage} />
+          <Route path='/detail/:id' component={DetailPage} />
+          <Route path='/search' exact component={SearchResultPage} />
         </Switch>
-        {/* <Slider/>       */}
-        {/* <Homepage/> */}
-        {/* <DetailPage/> */}
-        {/* <CardItem/>
-      <CardItem/>
-      <CardItemPotrait/> */}
       </div>
+      {/* <Slider />
+      <Homepage />
+      <DetailPage />
+      <CardItem />
+      <CardItem />
+      <CardItemPotrait />  */}
     </Router>
   );
 }

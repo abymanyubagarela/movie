@@ -22,7 +22,7 @@ class Header extends Component {
             <Link to='/home'>
               <Nav>Live</Nav>
             </Link>
-            <Link to='/detail'>
+            <Link to='/detail/abc'>
               <Nav>Movie</Nav>
             </Link>
             <Link>
