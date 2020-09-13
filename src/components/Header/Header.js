@@ -41,7 +41,7 @@ class Header extends React.Component {
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='mr-auto'>
-            <HashRouter basename='/home'>
+            <HashRouter basename='/'>
               <Link to='/'>
                 <Nav className={this.state.scrollClass}>Discover</Nav>
               </Link>
