@@ -14,12 +14,12 @@ Please kindly visit : https://abymanyubagarela.github.io/movie/
 1. On search please kindly click the search icon.
 
 ## Libraries Contains
-1.fortawesome
-2.jest  
-3.axios
-4.react-bootstrap
-5.node-sass
-6.react-redux
-7.react-router-dom"
-8.redux
-9.redux-thunk
+1. fortawesome
+2. jest  
+3. axios
+4. react-bootstrap
+5. node-sass
+6. react-redux
+7. react-router-dom"
+8. redux
+9. redux-thunk
