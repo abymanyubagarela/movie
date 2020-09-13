@@ -30,6 +30,7 @@ function App() {
               <Redirect to='/' />
             </Route> */}
             <Route path='/home' exact component={Homepage} />
+            <Route path='/movie' exact component={Homepage} />
             <Route path='/detail/:id' component={DetailPage} />
             <Route path='/search/:id' exact component={SearchResultPage} />
             <Route path='/favourite' exact component={FavouritePage} />
