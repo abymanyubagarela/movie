@@ -1,9 +1,10 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { HashRouter, Link } from 'react-router-dom';
 import SearchBox from '../SearchBox/SearchBox';
 import './Header.scss';
-import logo from '../../assets/logo-min.png';class Header extends React.Component {
+import logo from '../../assets/logo-min.png';
+class Header extends React.Component {
   constructor(props) {
     super();
     this.listener = null;
@@ -40,24 +41,26 @@ import logo from '../../assets/logo-min.png';class Header extends React.Componen
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='mr-auto'>
-            <Link to='/'>
-              <Nav className={this.state.scrollClass}>Discover</Nav>
-            </Link>
-            <Link to='/'>
-              <Nav className={this.state.scrollClass}>Movie</Nav>
-            </Link>
-            <Link to='/'>
-              <Nav className={this.state.scrollClass}>TV Show</Nav>
-            </Link>
-            <Link to='/favourite'>
-              <Nav className={this.state.scrollClass}>Favourite</Nav>
-            </Link>
-            {/* <Link to='/history'>
+            <HashRouter basename='/home'>
+              <Link to='/'>
+                <Nav className={this.state.scrollClass}>Discover</Nav>
+              </Link>
+              <Link to='/'>
+                <Nav className={this.state.scrollClass}>Movie</Nav>
+              </Link>
+              <Link to='/'>
+                <Nav className={this.state.scrollClass}>TV Show</Nav>
+              </Link>
+              <Link to='/favourite'>
+                <Nav className={this.state.scrollClass}>Favourite</Nav>
+              </Link>
+              {/* <Link to='/history'>
               <Nav className={this.state.scrollClass}>History</Nav>
             </Link> */}
-            <Nav>
-              <SearchBox />
-            </Nav>
+              <Nav>
+                <SearchBox />
+              </Nav>
+            </HashRouter>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
