@@ -26,9 +26,9 @@ function App() {
             <Route exact path='/'>
               <Redirect to='/home' />
             </Route>
-            <Route exact path='/movie'>
+            {/* <Route exact path='/movie'>
               <Redirect to='/' />
-            </Route>
+            </Route> */}
             <Route path='/home' exact component={Homepage} />
             <Route path='/detail/:id' component={DetailPage} />
             <Route path='/search/:id' exact component={SearchResultPage} />
