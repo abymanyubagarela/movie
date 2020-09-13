@@ -3,6 +3,9 @@ import CardItemPotrait from '../../components/CardItemPotrait/CardItemPotrait';
 import './MovieCardPotrait.scss';
 
 class MovieCardPotrait extends Component {
+  constructor(props) {
+    super()
+  }
   render() {
     return (
       <section className='home-section'>

@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 import './CardItem.scss';
+import { API_URL_IMAGES } from '../../constants/constant';
 class CardItem extends Component {
   render() {
     return (
       <div className='item'>
         <div className='card-item-content'>
-          <a href='/'>
+          <a href={'/detail/'+ this.props.movie.id}>
             <div className='card-item-content-image'>
               <picture className='picture-tag'>
-                <img
-                  src='https://image.tmdb.org/t/p/original/liYc4Z2lszmsLI0qWiOmk5zJCde.jpg'
-                  alt=''
-                />
+                <img src={API_URL_IMAGES + this.props.movie.backdrop_path} alt='' />
               </picture>
             </div>
           </a>
-          <div className='titles'>Holy Moon</div>
+          <div className='titles'>{this.props.movie.title}</div>
           <div className='detail'>
-            <div className='subtitle'>Parade Film Pendek</div>
+            <div className='subtitle'>{this.props.movie.title}</div>
           </div>
         </div>
       </div>

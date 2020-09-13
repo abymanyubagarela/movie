@@ -1,13 +1,34 @@
 import React, { Component } from 'react';
 import Banner from '../components/Banner/Banner';
+import * as moviesActions from '../actions/movieAction';
+import { connect } from 'react-redux';
 
-class DetailPage extends Component {
-  componentDidMount() {
-    console.log(this.props.match.params.id);
+class DetailPage extends React.Component {
+  componentWillMount() {
+    this.props.dispatch(
+      moviesActions.fetchMovieDetail(this.props.match.params.id)
+    );
   }
+
   render() {
-    return <Banner />;
+    const movie = this.props.movie;
+    return (
+      <div>
+        {movie !== null && (
+          <Banner
+            id={this.props.match.params.id}
+            movie={movie}
+            key={this.props.match.params.id}
+          />
+        )}
+      </div>
+    );
   }
 }
 
-export default DetailPage;
+const mapStateToProps = (state) => {
+  return {
+    movie: state.movies.movie,
+  };
+};
+export default connect(mapStateToProps)(DetailPage);

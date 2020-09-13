@@ -1,22 +1,37 @@
-import React, { Component } from 'react';
-import MovieCardPotrait from '../../containers/MovieCardPotrait/MovieCardPotrait';
+import React from 'react';
+import Slider from '../Slider/Slider';
+import { API_URL_IMAGES } from '../../constants/constant';
 
 import './Banner.scss';
-class Banner extends Component {
+import CardItemPotrait from '../CardItemPotrait/CardItemPotrait';
+class Banner extends React.Component {
+  constructor(props) {
+    super();
+    this.state = {
+      id: props.id,
+      movie: props.movie,
+    };
+  }
+
   render() {
     return (
-      <div className='site-content'>
-        <main>
+      <div className='site-content' key={this.state.movie.id}>
+        <Slider
+          img={API_URL_IMAGES + this.state.movie.backdrop_path}
+          title={this.state.movie.title}
+          tagline={this.state.movie.tagline}
+        />
+        <div className='main'>
           <section>
             <div className='profile-info'>
-              <div className='background'>
+              {/* <div className='background'>
                 <picture className='picture-tag'>
                   <img
                     src='https://image.tmdb.org/t/p/original/aKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg'
                     alt='First slide'
                   />
                 </picture>
-              </div>
+              </div> */}
               <div className='body'>
                 <div className='image'>
                   <div>
@@ -24,67 +39,43 @@ class Banner extends Component {
                       <picture className='picture-tags'>
                         <img
                           className='photo'
-                          src='https://image.tmdb.org/t/p/original/aKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg'
-                          alt='First slide'
+                          src={API_URL_IMAGES + this.state.movie.poster_path}
+                          alt=''
                         />
                       </picture>
                     </a>
                   </div>
                 </div>
                 <div className='details'>
-                  <h1 className='title'>Mulan</h1>
+                  <h1 className='title'>{this.state.movie.title}</h1>
                   <div className='rating'>
                     <div className='genre'>
-                      <a href='/'>Newly Added</a>
+                      {this.state.movie.genres.map((g) => (
+                        <span key={g.id}> {g.name}</span>
+                      ))}
                     </div>
                   </div>
                   <div className='button'>
-                    <a href='/' className='button-action watch'>
+                    <button className='button-action watch'>
                       {' '}
-                      Tonton Sekarang{' '}
-                    </a>
-                    <a href='/' className='button-action share'>
-                      {' '}
-                      Bagikan{' '}
-                    </a>
-                    <a href='/' className='button-action list'>
-                      {' '}
-                      Add Daftar{' '}
-                    </a>
+                      Add to Favourite
+                    </button>
                   </div>
                   <div className='description'>
-                    <p className='desc'>
-                      Berlatar di sebuah pulau kecil, Serui di Papua, Hans yang
-                      berusia sembilan belas tahun meninggalkan panti asuhan
-                      yang selama ini ia sebut rumah untuk pergi ke Jakarta demi
-                      menjadi pesepakbola profesional. Namun, kecelakaan membuat
-                      mimpi masa kecilnya kandas. Upaya bunuh diri yang gagal
-                      membawanya ke pertemuan dengan Mak, pemilik restoran
-                      Padang sederhana. Semangkuk kari kepala ikan yang hangat
-                      dan belas kasihan Mak mengingatkan Hans akan kampung
-                      halamannya. Keinginannya untuk hidup kembali lagi, dan ia
-                      meminta untuk bekerja di restoran. Kehadiran Hans memicu
-                      penolakan keras dari Parmanto, si juru masak dan pelayan,
-                      Natsir. Keadaan menjadi lebih buruk ketika Parmanto
-                      memutuskan untuk berhenti dan pindah ke restoran saingan
-                      yang terletak tepat di seberang rumah makan padang milik
-                      Mak.
-                    </p>
-                    <p className='desc'>
+                    <p className='desc'>{this.state.movie.overview}</p>
+                    {/* <p className='desc'>
                       <strong>Director : &nbsp;</strong> Adriyanto Dewo
                     </p>
                     <p className='desc'>
                       <strong>Cast : &nbsp;</strong> Adriyanto Dewo
-                    </p>
+                    </p> */}
                   </div>
                   <div className='profile-playlist content'>
                     <hr />
                     <section className='profile-section'>
-                      <h2 class='header'>Trailer</h2>
+                      <h2 className='header'>Populars</h2>
                       <div className='profile-section-items'>
-                      <MovieCardPotrait />
-                      <MovieCardPotrait />
-                      <MovieCardPotrait />                        
+                        <CardItemPotrait limit='3' />
                       </div>
                     </section>
                   </div>
@@ -92,7 +83,7 @@ class Banner extends Component {
               </div>
             </div>
           </section>
-        </main>
+        </div>
       </div>
     );
   }

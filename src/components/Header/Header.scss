@@ -26,6 +26,7 @@
     font-weight: 600;
     opacity: 0.6;
     margin-right: 10px;
+    color:  #1e1e1e;
     &:hover {
       color: #1e1e1e;
       opacity: 1;
@@ -42,4 +43,7 @@
   }
 }
 
-
+.transparent {
+  background: transparent;
+  color: white;
+}
