@@ -27,7 +27,7 @@ function App() {
               <Redirect to='/home' />
             </Route>
             <Route exact path='/movie'>
-              <Redirect to='/home' />
+              <Redirect to='/' />
             </Route>
             <Route path='/home' exact component={Homepage} />
             <Route path='/detail/:id' component={DetailPage} />
