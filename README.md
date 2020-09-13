@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Demo
-Please kindly visit : https://abymanyubagarela.github.io/movie/
+Please kindly visit : https://abymanyubagarela.github.io/movie/ then click one of menu [due to github page issues]
 
 ## Deployment 
 1. Clone the project first : https://github.com/abymanyubagarela/movie.git
@@ -13,6 +13,7 @@ Please kindly visit : https://abymanyubagarela.github.io/movie/
 
 ## Exception
 1. On search please kindly click the search icon.
+2. Given api http://www.omdbapi.com/  Due to incomplete doc. in development use https://developers.themoviedb.org/3/movies .
 
 ## Libraries Contains
 1. fortawesome
