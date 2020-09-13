@@ -6,6 +6,7 @@ import Homepage from './pages/Homepage';
 import DetailPage from './pages/DetailPage';
 import {
   BrowserRouter as Router,
+  HashRouter,
   Redirect,
   Route,
   Switch,
@@ -21,7 +22,9 @@ function App() {
     <Provider store={store}>
       <Router>
         <div className='App'>
-          <Header />
+          <HashRouter basename='/'>
+            <Header />
+          </HashRouter>
           <Switch>
             <Route exact path='/'>
               <Redirect to='/home' />
