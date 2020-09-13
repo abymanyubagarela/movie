@@ -4,7 +4,7 @@ import SearchResult from '../containers/SearchResult/SearchResult';
 class SearchResultPage extends Component {
     render() {
         return (
-            <SearchResult/>
+            <SearchResult  id={this.props.match.params.id}/>
         )
     }
 }

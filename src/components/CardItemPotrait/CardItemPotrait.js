@@ -4,6 +4,7 @@ import './CardItemPotrait.scss';
 import * as moviesActions from '../../actions/movieAction';
 import { connect } from 'react-redux';
 import { API_URL_IMAGES } from '../../constants/constant';
+import { Link } from 'react-router-dom';
 class CardItemPotrait extends Component {
   constructor(props) {
     super();
@@ -21,13 +22,15 @@ class CardItemPotrait extends Component {
       .map((movie, index) => (
         <div className='item' key={index}>
           <div className='potrait'>
-            <a href={'/detail/' + movie.id}>
-              <div className='image'>
-                <picture className='picture-tag'>
-                  <img src={API_URL_IMAGES + movie.poster_path} alt='' />
-                </picture>
-              </div>
-            </a>
+            <div>
+              <Link to={'/detail/' + movie.id}>
+                <div className='image'>
+                  <picture className='picture-tag'>
+                    <img src={API_URL_IMAGES + movie.poster_path} alt='' />
+                  </picture>
+                </div>
+              </Link>
+            </div>
             <div className='titles'>{movie.title}</div>
             <div className='detail'>
               <div className='subtitle'>Release {movie.title}</div>

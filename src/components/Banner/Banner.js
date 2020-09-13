@@ -1,17 +1,31 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Slider from '../Slider/Slider';
 import { API_URL_IMAGES } from '../../constants/constant';
 
 import './Banner.scss';
 import CardItemPotrait from '../CardItemPotrait/CardItemPotrait';
+import * as movieActions from '../../actions/movieAction';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 class Banner extends React.Component {
   constructor(props) {
     super();
     this.state = {
       id: props.id,
       movie: props.movie,
+      hidden: false,
     };
   }
+
+  componentWillMount() {
+    this.props.dispatch(movieActions.addMovieHistory(this.state.movie));
+  }
+
+  addFavourite = () => {
+    this.props.dispatch(movieActions.addMovieFavourite(this.state.movie));
+    this.setState({ hidden: true });
+  };
 
   render() {
     return (
@@ -35,7 +49,7 @@ class Banner extends React.Component {
               <div className='body'>
                 <div className='image'>
                   <div>
-                    <a href='/'>
+                    <p>
                       <picture className='picture-tags'>
                         <img
                           className='photo'
@@ -43,7 +57,7 @@ class Banner extends React.Component {
                           alt=''
                         />
                       </picture>
-                    </a>
+                    </p>
                   </div>
                 </div>
                 <div className='details'>
@@ -56,10 +70,20 @@ class Banner extends React.Component {
                     </div>
                   </div>
                   <div className='button'>
-                    <button className='button-action watch'>
-                      {' '}
-                      Add to Favourite
-                    </button>
+                    {!this.state.hidden ? (
+                      <button
+                        className='btn button-action watch'
+                        onClick={this.addFavourite}
+                      >
+                        Add to Favourite
+                      </button>
+                    ) : (
+                      <Link to='/favourite'>
+                        <button className='btn button-action share'>
+                          Go to Favourite
+                        </button>
+                      </Link>
+                    )}
                   </div>
                   <div className='description'>
                     <p className='desc'>{this.state.movie.overview}</p>
@@ -89,4 +113,9 @@ class Banner extends React.Component {
   }
 }
 
-export default Banner;
+const mapStateToProps = (state) => {
+  return {
+    movies: state.movies,
+  };
+};
+export default connect(mapStateToProps)(Banner);

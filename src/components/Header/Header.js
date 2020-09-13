@@ -5,7 +5,7 @@ import SearchBox from '../SearchBox/SearchBox';
 import './Header.scss';
 import logo from '../../assets/logo-min.png';class Header extends React.Component {
   constructor(props) {
-    super(props);
+    super();
     this.listener = null;
     this.state = {
       status: 'top',
@@ -34,7 +34,7 @@ import logo from '../../assets/logo-min.png';class Header extends React.Componen
   render() {
     return (
       <Navbar expand='lg' className={this.state.scrollClass}>
-        <Navbar.Brand href='/'>
+        <Navbar.Brand href='#'>
           <img className='image_header' src={logo} alt='logo' />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -43,18 +43,18 @@ import logo from '../../assets/logo-min.png';class Header extends React.Componen
             <Link to='/'>
               <Nav className={this.state.scrollClass}>Discover</Nav>
             </Link>
-            <Link to='/movie'>
+            <Link to='/'>
               <Nav className={this.state.scrollClass}>Movie</Nav>
             </Link>
-            <Link to='/tv-show'>
+            <Link to='/'>
               <Nav className={this.state.scrollClass}>TV Show</Nav>
             </Link>
             <Link to='/favourite'>
               <Nav className={this.state.scrollClass}>Favourite</Nav>
             </Link>
-            <Link to='/history'>
+            {/* <Link to='/history'>
               <Nav className={this.state.scrollClass}>History</Nav>
-            </Link>
+            </Link> */}
             <Nav>
               <SearchBox />
             </Nav>

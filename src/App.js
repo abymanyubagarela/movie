@@ -13,6 +13,7 @@ import {
 import SearchResultPage from './pages/SearchResultPage';
 import globalStore from './store/globalStore';
 import { Provider } from 'react-redux';
+import FavouritePage from './pages/FavouritePage';
 
 const store = globalStore();
 function App() {
@@ -27,8 +28,9 @@ function App() {
             </Route>
             <Route path='/home' exact component={Homepage} />
             <Route path='/detail/:id' component={DetailPage} />
-            <Route path='/search' exact component={SearchResultPage} />
-            <Route path='/favourite' exact component={SearchResultPage} />
+            <Route path='/search/:id' exact component={SearchResultPage} />
+            <Route path='/favourite' exact component={FavouritePage} />
+            {/* <Route path='/history' exact component={HistoriesPage} /> */}
           </Switch>
         </div>
       </Router>

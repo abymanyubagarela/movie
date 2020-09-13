@@ -1,36 +1,30 @@
 import React, { Component } from 'react';
 import CardItem from '../../components/CardItem/CardItem';
-import './SearchResult.scss';
+import './Favourite.scss';
 import * as movieActions from '../../actions/movieAction';
 import { connect } from 'react-redux';
-class SearchResult extends Component {
+class Favourite extends Component {
   constructor(props) {
     super();
     this.state = {
-      id: props.id,
-      find: null,
+      favourite: null,
     };
   }
 
-  componentWillMount() {
-    this.props.dispatch(movieActions.findMovie(this.state.id));
+  componentDidMount() {
+    this.props.dispatch(movieActions.getFavourite());
+  }
+  componentWillReceiveProps(newProps) {
+    this.setState({ favourite: newProps.favourite });
   }
 
-  componentWillReceiveProps(newProps) {
-    this.setState({ find: newProps.finds });
-  }
-  
   render() {
     return (
       <div className='site-content-search'>
         <main>
           <div className='search-container'>
             <div className='title'>
-              <h3 className='suggestion'>
-                {' '}
-                Showing result of
-                <em> {this.state.id}</em>
-              </h3>
+              <h3 className='suggestion'> Latest Favourites</h3>
             </div>
             <div className='result'>
               <div className='result-info'>
@@ -38,12 +32,12 @@ class SearchResult extends Component {
               </div>
               <div className='result-content'>
                 <div className='result-container'>
-                  {this.state.find ? (
-                    this.state.find.map((find, index) => (
-                      <CardItem movie={find} key={index} />
+                  {this.state.favourite ? (
+                    this.state.favourite.favourite.map((fa, index) => (
+                      <CardItem movie={fa} key={index} />
                     ))
                   ) : (
-                    <p>No Query Found</p>
+                    <p>No Favourite</p>
                   )}
                 </div>
               </div>
@@ -57,7 +51,7 @@ class SearchResult extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    finds: state.movies.finds,
+    favourite: state.movies,
   };
 };
-export default connect(mapStateToProps)(SearchResult);
+export default connect(mapStateToProps)(Favourite);
