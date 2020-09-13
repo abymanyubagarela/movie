@@ -1,6 +1,4 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-## Demo
-Please kindly visit : https://abymanyubagarela.github.io/movie/ then click one of menu [due to github page issues]
 
 ## Deployment 
 1. Clone the project first : https://github.com/abymanyubagarela/movie.git
